@@ -1,0 +1,54 @@
+
+body {
+
+  font: 1.1rem/1.6 system-ui, sans-serif;
+
+  margin: 0;
+  
+  color: #172b3a;
+
+  background: #f4f7f8;
+
+}
+
+main {
+
+  max-width: 55rem;
+
+  padding: 1.5rem;
+
+  margin: auto;
+
+}
+
+label {
+
+  display: block;
+
+}
+
+input, button {
+
+  font: inherit;
+
+  padding: .5rem;
+
+  margin: .3rem 0;
+
+  max-width: 100%;
+
+}
+
+:focus-visible {
+
+  outline: 3px solid #075c86;
+
+  outline-offset: 3px;
+
+}
+
+pre {
+  
+  white-space: pre-wrap;
+
+}

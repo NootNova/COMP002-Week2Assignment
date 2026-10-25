@@ -1,0 +1,10 @@
+
+.DS_Store
+
+.wakatime.cfg
+
+.env
+
+.env.*
+
+node_modules/
