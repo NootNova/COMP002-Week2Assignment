@@ -1,16 +1,35 @@
 
-// This file starts unfinished. Record the first call before implementing your design.
+// Record the first call before implementing your design; the first call returns undefined.
 
-// Read the complete contract and evidence directions in README.md.
+// [x] TODO: Check blank/whitespace before deliberate Number conversion.
 
+// [x] TODO: Reject non-finite input, negative price, and negative/fractional quantity.
+
+// [x] TODO: Preserve valid zero and decimal prices.
 
 function calculateTicketTotal(priceText, quantityText, hasDiscount = false) {
 
-  // TODO: Check blank/whitespace before deliberate Number conversion.
+  if (priceText.trim() === '') return 'Enter a price.';
 
-  // TODO: Reject non-finite input, negative price, and negative/fractional quantity.
+  if(quantityText.trim() === '') return 'Enter a quantity.';
 
-  // TODO: Preserve valid zero and decimal prices.
+  const price = Number(priceText);
+
+  const quantity = Number(quantityText);
+
+  if (!Number.isFinite(price)) return 'Use a finite price.';
+
+  if (!Number.isFinite(quantity)) return 'Use a finite quantity.';
+
+  if (priceText == 0) {
+
+    return price + quantity;
+
+  } else {
+
+    return price * quantity;
+ 
+  }
 
   // TODO: Use an if/else decision for your documented Boolean discount rule.
 
@@ -18,11 +37,13 @@ function calculateTicketTotal(priceText, quantityText, hasDiscount = false) {
 
 }
 
-// Baseline: this unfinished call returns undefined because the stub has no return.
-
-// When your complete ordinary path works, this call should return numeric 7.5.
-
 console.log(calculateTicketTotal('2.50', '3'));
+
+console.log(calculateTicketTotal('0', '20'));
+
+console.log(calculateTicketTotal('5.25', '15'));
+
+
 
 // TODO: Choose and run the boundary, error, next-valid, and flag tests in README.
 
