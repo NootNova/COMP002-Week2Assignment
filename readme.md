@@ -97,7 +97,7 @@ the reject message for negative quantity works as expected.|
 
 -------------------------------------------------------------------------
 
-Source record: starter `comp2-m02-assignment-starter.zip`; earlier own source copied: (https://github.com/NootNova/COMP002-Week2Lesson); my changes for this task: [Added a discount amount to use when discount is true].
+Source record: starter `comp2-m02-assignment-starter.zip`; earlier own source copied: (https://github.com/NootNova/COMP002-Week2Lesson); my changes for this task: [Added a discount amount to use when discount is true, added an 'if' for negative price and quantity values to enter a console log].
 
 ## Publish and submit
 
