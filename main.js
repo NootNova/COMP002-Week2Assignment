@@ -7,7 +7,7 @@
 
 // [x] TODO: Preserve valid zero and decimal prices.
 
-function calculateTicketTotal(priceText, quantityText, hasDiscount = false) {
+function calculateTicketTotal(priceText, quantityText, hasDiscount = true) {
 
   if (priceText.trim() === '') return 'Enter a price.';
 
@@ -17,12 +17,29 @@ function calculateTicketTotal(priceText, quantityText, hasDiscount = false) {
 
   const quantity = Number(quantityText);
 
+  let discount = .15;
+
   if (!Number.isFinite(price)) return 'Use a finite price.';
 
   if (!Number.isFinite(quantity)) return 'Use a finite quantity.';
 
-  return price * quantity;
-  
+  if (hasDiscount === true) {
+
+    console.log('Discount active.')
+
+    let discountAmount = discount * price; 
+
+    let discountPrice = price - discountAmount;
+
+    return discountPrice * quantity;
+
+  } else {
+    
+    console.log('Discount inactive');
+
+    return price * quantity;
+
+  }
  
   // TODO: Use an if/else decision for your documented Boolean discount rule.
 
