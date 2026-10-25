@@ -1,5 +1,5 @@
 
-// Record the first call before implementing your design; the first call returns undefined.
+// [x] Record the first call before implementing your design; the first call returns undefined.
 
 // [x] TODO: Check blank/whitespace before deliberate Number conversion.
 
@@ -21,16 +21,9 @@ function calculateTicketTotal(priceText, quantityText, hasDiscount = false) {
 
   if (!Number.isFinite(quantity)) return 'Use a finite quantity.';
 
-  if (priceText == 0) {
-
-    return price + quantity;
-
-  } else {
-
-    return price * quantity;
+  return price * quantity;
+  
  
-  }
-
   // TODO: Use an if/else decision for your documented Boolean discount rule.
 
   // TODO: Return an understandable rejection message or a numeric successful total.
@@ -43,6 +36,7 @@ console.log(calculateTicketTotal('0', '20'));
 
 console.log(calculateTicketTotal('5.25', '15'));
 
+console.log(calculateTicketTotal('35', '0'));
 
 
 // TODO: Choose and run the boundary, error, next-valid, and flag tests in README.

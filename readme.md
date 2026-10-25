@@ -23,9 +23,9 @@ Keep the supplied signature:
 calculateTicketTotal(priceText, quantityText, hasDiscount = false)
 ```
 
-- The first two arguments are strings. Check each for blank/whitespace **before** converting with `Number`.
-- Reject non-finite input, negative price, and quantity that is negative or not an integer. Return an understandable rejection message.
-- Allow zero price, zero quantity, and decimal prices. Zero must survive validation.
+- [x]The first two arguments are strings. Check each for blank/whitespace **before** converting with `Number`.
+- [x]Reject non-finite input, negative price, and quantity that is negative or not an integer. Return an understandable rejection message.
+- [x]Allow zero price, zero quantity, and decimal prices. Zero must survive validation.
 - Use explicit conversion, arithmetic, and an `if/else` decision. Apply your chosen, documented discount only when the Boolean parameter is `true`. Otherwise use the ordinary total. Omitting the third argument uses `false`.
 - Return a **number** on success. Calling with `'2.50', '3', false` must return numeric `7.5`.
 - Use `const`/`let` according to the class convention, meaningful names, and comments explaining a function, decision, or repair.
